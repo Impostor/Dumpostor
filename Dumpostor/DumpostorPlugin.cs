@@ -86,6 +86,7 @@ public sealed partial class DumpostorPlugin : BasePlugin
 
             new ColorDumper(),
             new EnumDumper<DisconnectReasons>(),
+            new EnumDumper<SanctionReasons>(),
             new EnumDumper<GameKeywords>(),
             new EnumDumper<GameOverReason>(),
             new EnumDumper<Platforms>(),
