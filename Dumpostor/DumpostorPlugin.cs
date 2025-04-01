@@ -99,6 +99,13 @@ public sealed partial class DumpostorPlugin : BasePlugin
             new EnumDumper<RpcCalls>(),
             new EnumDumper<SpecialGameModes>(),
             new EnumDumper<RulesPresets>(),
+            new EnumDumper<BoolOptionNames>(),
+            new EnumDumper<ByteOptionNames>(),
+            new EnumDumper<FloatArrayOptionNames>(),
+            new EnumDumper<FloatOptionNames>(),
+            new EnumDumper<Int32ArrayOptionNames>(),
+            new EnumDumper<Int32OptionNames>(),
+            new EnumDumper<UInt32OptionNames>(),
         };
 
         foreach (var dumper in dumpers)
