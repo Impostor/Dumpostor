@@ -6,6 +6,7 @@ using System.IO;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using AmongUs.GameOptions;
+using AmongUs.Matchmaking;
 using BepInEx;
 using BepInEx.Configuration;
 using BepInEx.Unity.IL2CPP;
@@ -101,6 +102,7 @@ public sealed partial class DumpostorPlugin : BasePlugin
             new EnumDumper<RulesPresets>(),
             new EnumDumper<BoolOptionNames>(),
             new EnumDumper<ByteOptionNames>(),
+            new EnumDumper<CategorizedOptionNames>(),
             new EnumDumper<FloatArrayOptionNames>(),
             new EnumDumper<FloatOptionNames>(),
             new EnumDumper<Int32ArrayOptionNames>(),
