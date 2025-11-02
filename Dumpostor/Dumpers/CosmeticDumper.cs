@@ -57,15 +57,7 @@ namespace Dumpostor.Dumpers
                 cosmetics.Add(new Cosmetic("Visor", visor.ProdId, visor.Free, "", visor.beanCost, visor.starCost, visor.BundleId, visor.ChipOffset));
             }
 
-            return JsonSerializer.Serialize(cosmetics,
-                new JsonSerializerOptions
-                {
-                    WriteIndented = true,
-                    Converters =
-                    {
-                        new Vector2Converter()
-                    }
-                });
+            return JsonSerializer.Serialize(cosmetics, DumpostorPlugin.JsonSerializerOptions);
         }
     }
 }
