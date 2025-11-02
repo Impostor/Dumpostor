@@ -82,7 +82,7 @@ public sealed partial class DumpostorPlugin : BasePlugin
         {
             new InfoDumper(),
             new SpawnableObjectsDumper(spawnableObjects),
-            // new TranslationsDumper(),
+            new TranslationsDumper(),
 
             new ColorDumper(),
             new CosmeticDumper(),
