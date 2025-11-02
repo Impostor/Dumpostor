@@ -136,6 +136,14 @@ public sealed partial class DumpostorPlugin : BasePlugin
 
             var shipStatus = UnityEngine.Object.Instantiate(shipStatusPrefab);
 
+            var fungleShipStatus = shipStatus.GetComponent<FungleShipStatus>();
+            if (fungleShipStatus != null) {
+                MushroomMixupCosmeticsDumper mixupDumper = new();
+                var outputPath = Path.Combine(mapDirectory, mixupDumper.FileName);
+                Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
+                File.WriteAllText(outputPath, mixupDumper.Dump(fungleShipStatus));
+            }
+
             foreach (var dumper in mapDumpers)
             {
                 Info("Dumping " + dumper);
