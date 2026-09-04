@@ -12,7 +12,7 @@ public sealed class EnumDumper<T> : IDumper where T : Enum
     public string Dump()
     {
         return JsonSerializer.Serialize(
-            Extensions.GetValues<T>().ToDictionary(k => Enum.GetName(typeof(T), k), v => v),
+            Extensions.GetValues<T>().ToDictionary(k => Enum.GetName(typeof(T), k), v => Convert.ToInt32(v)),
             DumpostorPlugin.JsonSerializerOptions
         );
     }
